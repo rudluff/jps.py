@@ -14,5 +14,5 @@ It doesn't work on the plain torrents.php page, only searches. It also doesn't w
 It will grab every single torrent file that appeared in that search. It traverses pages. The torrents end up in the same folder jps.py itself is in.
 It's not "smart", and always clobbers (so if you don't have it living in your watched directory like me, make sure to clear torrents between runs). It's not "helpful" either: It has no error handling or meaningful error messages.
 It *is* "polite", and waits 2.2 seconds between each request.
-The torrent files are named <pagenumber>-<torrentnumberwithinpage>.torrent e.g. 1-52.torrent, 3-2.torrent.
+The torrent files are named pagenumber-torrentnumberwithinpage.torrent e.g. 1-52.torrent, 3-2.torrent.
 Use at your own risk.
