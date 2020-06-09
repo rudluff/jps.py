@@ -4,7 +4,9 @@ How bad is it? Just take a look at it, man... it has only one thing going for it
 ![yes-i-program-in-mousepad-fight-me](https://github.com/rudluff/jps.py/blob/master/yes-i-program-in-mousepad-fight-me.png)
 # Usage
 ```python3 -m pip install requests bs4```
+
 ```./jps.py 'JPS-SEARCH-URL'```
+
 Open up jps.py and put your own PHPSESSID in. Go to jpopsuki's Search/Advanced Search and make a query that you like. Feed the script that search URL.
 It doesn't work on the plain torrents.php page, only searches. It also doesn't work on single-page search results.
 
