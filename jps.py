@@ -15,14 +15,16 @@ search_url = sys.argv[1]
 page = requests.get(search_url, cookies=cookies)
 soup = BeautifulSoup(page.text, "lxml")
 
-pages = soup.find('div', class_="linkbox")
-pages = [i for i in pages if i] 
-
 # crufty way to locate maximum page number (i know it's stupid)
-lastlink = pages[-1].attrs['href']
-lastlink = lastlink[18:]
-lastlink = lastlink.split("&")
-lastlink = int(lastlink[0])
+try:
+    pages = soup.find('div', class_="linkbox")
+    pages = [i for i in pages if i] 
+    lastlink = pages[-1].attrs['href']
+    lastlink = lastlink[18:]
+    lastlink = lastlink.split("&")
+    lastlink = int(lastlink[0])
+except:
+    lastlink = 1
 
 # go to page, grab urls to .torrent files, download those torrent files, go to next page, repeat
 for pageno in range(1,lastlink):
