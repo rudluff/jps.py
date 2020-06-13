@@ -6,7 +6,7 @@ How bad is it? Just take a look at it, man... it has only one thing going for it
 This entire script is self-contained (big surprise), so download it to wherever you'd like to run it from. Installation of dependencies:
 ```python3 -m pip install --upgrade requests bs4 lxml```
 
-It should work with Python 3.6, 3.7, and 3.8; it is incompatible with Python 2.x.
+It should work with Python 3.6, 3.7, and 3.8; it is incompatible with Python 2.x due to the BS4 dependency (although it shouldn't be too hard to backport, that's a rabbit hole best left to the user who is somehow unable to obtain Python 3).
 # Usage
 ```./jps.py 'JPS-SEARCH-URL'```
 
